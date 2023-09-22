@@ -26,7 +26,7 @@ SECRET_KEY = '8d^qo$f_n27u%$-8$nh8s8kx+cxz_)1nxhlthc(&@v^guy)z8h'
 DEBUG = True
 
 from socket import gethostname, gethostbyname 
-ALLOWED_HOSTS = [gethostname(), gethostbyname(gethostname()), 'localhost']
+ALLOWED_HOSTS = [gethostname(), gethostbyname(gethostname()), 'localhost','127.0.0.1']
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'l2l.apps.L2LConfig',
+    'l2l',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'testsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'I2I' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
